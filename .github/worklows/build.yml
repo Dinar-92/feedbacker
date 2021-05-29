@@ -16,5 +16,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}
           registry: ghcr.io
-          repository: dinar-92/fd
+          repository: dinar-92/feedbacker
           tag_with_ref: true
