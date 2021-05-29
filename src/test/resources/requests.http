@@ -1,0 +1,74 @@
+### registration client
+
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "login": "client9",
+  "password": "Lada2109",
+  "secret" : "Sputnik9",
+  "roles" : ["ROLE_USER"]
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.assert(response.contentType.mimeType === "application/json", "Response Content-Type is not application/json");
+});
+%}
+
+###
+
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "login": "Moderator1",
+  "password": "Lada2115",
+  "secret" : "Samara15",
+  "roles" : ["ROLE_MODERATOR"]
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.assert(response.contentType.mimeType === "application/json", "Response Content-Type is not application/json");
+});
+%}
+
+###
+
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "login": "Admin1",
+  "password": "Admin1",
+  "secret" : "Admin1",
+  "roles" : ["ROLE_ADMIN"]
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.assert(response.contentType.mimeType === "application/json", "Response Content-Type is not application/json");
+});
+%}
+
+###
+###
+
+
+
+GET {{host}}/api/users/all
+Authorization: {{token}}
+
+###
+
+GET {{host}}/api/users/all
+
+###
+
+GET {{host}}/api/users/getById
+
+###
