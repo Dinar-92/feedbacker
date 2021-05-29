@@ -86,7 +86,6 @@
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <!-- Ctrl + Alt + V -->
                             <version>${mapstruct.version}</version>
                         </path>
                         <path>
